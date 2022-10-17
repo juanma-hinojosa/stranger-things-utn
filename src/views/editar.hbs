@@ -1,0 +1,60 @@
+<header aria-label="Cabeçalho da página.">
+        <audio id="music" autoplay>
+            {{!-- <source src="/musics/normal-world.mpeg" aria-details="Audio do site" /> --}}
+        </audio>
+        <div class="header-content">
+            <img class="invert-element" src="/images/banner/logo-2.png"
+                alt="Imagem principal upside." />
+            <p class="invert-element" role="text">
+                Una Jornada para quien no le tiene miedo a lo desconocido. El camino para el Upside Down es incierto,
+                repleto de obstaculos
+                y peligros. Sin embargo, la recompensa es grande: Salvar Hawkings y el mundo de las garas de Vecna.
+                Estas Listo? Hace Click en el boton de abajo para entrar al Upside Down.
+            </p>
+            <button id="switch-theme-button" onclick="switchTheme()">Cambiar Mundos</button>
+        </div>
+
+        <div id="top-characters" class="world-characters"></div>
+</header>
+<main>
+    <section id="section-form" class="container">
+        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+            data-aos-delay="300" data-aos-offset="0">
+            <h2>El Club Hellfire - Actualizar </h2>
+            <p>
+                Para detener a Vecna, los héroes de Stranger Things también
+                necesitan
+                vos. El Club Hellfire más famoso de Hawkings está abierto
+                para tu próxima aventura. Si no tienes miedo, te gustan los
+                retos y
+                no tiene miedo de correr el D20, es hora de registrarse para
+                hacer
+                parte de la nueva campaña.
+            </p>
+        </div>
+
+
+        <div class="form-content">
+            <h3 data-aos="fade-right">Únete al club Hellfire y experimenta
+                <span>otro mundo<span></span></h3>
+
+                <div class="form-container" data-aos="fade-up">
+                    <form action="/actualizar/{{ result._id }}?_method=PUT" method="post">
+                        <label for="txtName">Nombre Completo</label>
+                        <input type="text" name="txtName" id="txtName" value="{{ result.txtName }}">
+
+                        <label for="txtEstado">Estado</label>
+                        <input type="text" name="txtEstado" id="txtEstado" value="{{ result.txtEstado }}" >
+                        <label for="txtCharacter">Descripcion</label>
+                        <textarea name="txtCharacter" cols="30" rows="10" id="txtCharacter">
+                            {{ result.txtCharacter }}
+                        </textarea>
+
+                        {{!-- <label for="txtUrl">Foto</label>
+                        <input type="text" name="txtUrl" id="txtUrl"> --}}
+                        <button type="submit" id="btnSubscribe">Editar</button>
+                    </form>
+                </div>
+        </div>
+    </section>
+</main>

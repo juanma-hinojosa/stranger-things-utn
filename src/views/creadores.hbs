@@ -1,0 +1,78 @@
+<header aria-label="Cabeçalho da página.">
+    <audio id="music" autoplay>
+        {{!-- <source src="/musics/normal-world.mpeg" aria-details="Audio do
+            site" /> --}}
+    </audio>
+    <div class="header-content">
+        <img class="invert-element" src="/images/banner/logo-2.png"
+            alt="Imagem principal upside." />
+        <p class="invert-element" role="text">
+            Una Jornada para quien no le tiene miedo a lo desconocido. El camino
+            para el Upside Down es incierto,
+            repleto de obstaculos
+            y peligros. Sin embargo, la recompensa es grande: Salvar Hawkings y
+            el mundo de las garas de Vecna.
+            Estas Listo? Hace Click en el boton de abajo para entrar al Upside
+            Down.
+        </p>
+        <button id="switch-theme-button" onclick="switchTheme()">Cambiar Mundos</button>
+    </div>
+
+    <div id="top-characters" class="world-characters"></div>
+</header>
+<main>
+    <div id="bottom-characters" class="world-characters"></div>
+
+    <section id="section-inverted-world" class="container">
+        <div class="section-texts" data-aos="fade-right">
+            <h2>El Upside Down</h2>
+            <p role="text">
+                El Upside Down parece una copia de nuestro Mundo, pero con
+                criaturas horrendas, tormentas asustadoras,
+                mucha obscuridad y entidades malignas. Un reino controlado por
+                Vecna, que tiene los planes de traer todo
+                esto a nuestro mundo.
+            </p>
+        </div>
+
+        <img class="invert-element" src="/images/content/inverted-world.png"
+            alt="Image ilustrativa del Mundo Invertido" data-aos="fade-up"/>
+    </section>
+
+    <h2 data-aos="fade-right">Lista para Derrotar a Vecna</h2>
+
+    <div class="grid-cards-content">
+    {{#each result}}
+        <div class="card-content" data-aos="fade-up">
+            <div class="card-wrapper">
+                <div class="card-img-content">
+                    <div class="card-img-wrapper  invert-element">
+                        <img class="logo-png" src="/images/banner/logo-2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="card-text-content">
+                    <div class="name-content">
+                        <h4 class="name-card" >{{ txtName }}</h4>
+                    </div>
+
+                    <p class="estado-card">
+                        {{ txtCharacter }}
+                    </p>
+                </div>
+
+                <div class="card-footer-content">
+                    <div class="card-wrapper-content">
+                        <h4>{{ txtEstado }}</h4>
+                    </div>
+
+                    <div class="links-setting">
+                        <a href="/editar/{{_id}}" class="card-link">Editar</a>
+                        <a href="/eliminar/{{_id}}" class="card-link">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</main>

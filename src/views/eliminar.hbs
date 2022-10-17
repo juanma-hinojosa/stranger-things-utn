@@ -1,0 +1,41 @@
+<main>
+
+
+    <h2>
+        Eliminar registro?
+    </h2>
+
+    <form action="/eliminado/{{ result._id }}?_method=DELETE" method="post">
+        <div class="card-content">
+            <div class="card-wrapper">
+                <div class="card-img-content">
+                    <div class="card-img-wrapper">
+                        <img class="logo-png"
+                            src="/images/banner/logo-2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="card-text-content">
+                    <div class="name-content">
+                        <h4 class="name-card">{{ result.txtName }}</h4>
+                    </div>
+
+                    <p class="estado-card">
+                        {{ result.txtCharacter }}
+                    </p>
+                </div>
+
+                <div class="card-footer-content">
+                    <div class="card-wrapper-content">
+                        <h4>{{ result.txtEstado }}</h4>
+                    </div>
+
+                    <div class="links-setting">
+                        <button type="submit" id="btnSubscribe">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</main>

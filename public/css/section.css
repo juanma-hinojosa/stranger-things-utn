@@ -1,0 +1,7 @@
+/* estilo de section */
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+}

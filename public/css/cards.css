@@ -1,0 +1,77 @@
+.grid-cards-content {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.card-content {
+    background-color: rgb(227, 216, 171);
+    padding: 20px;
+}
+
+.card-wrapper {
+    border: 2px solid rgb(68, 62, 62);
+}
+
+.card-img-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid rgb(68, 62, 62)
+}
+
+.card-img-content > .card-img-wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+.card-img-content > .card-img-wrapper .logo-png {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-text-content {
+    padding: 20px;
+    color: antiquewhite;
+    background-color: brown;
+    border-bottom: 2px solid rgb(68, 62, 62);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.card-text-content > .name-content {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.card-text-content > .estado-card {
+    width: 100%;
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-family: "Archivo", sans-serif;
+}
+
+.card-footer-content {
+    padding: 10px;
+    text-align: center;
+    color: rgb(68, 62, 62);
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-family: "Archivo", sans-serif;
+}
+
+.card-footer-content > .links-setting {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-footer-content > .links-setting a{
+    text-decoration: none;
+    color: rgb(68, 62, 62);
+}
